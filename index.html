@@ -50,11 +50,15 @@
       <div class="site-wrapper">
         <h2>Stay in the loop</h2>
         <p>New releases, behind-the-scenes updates, and the occasional note on what we're reading.</p>
-        <!-- Replace action URL with your mailing list provider (Buttondown, Mailchimp, etc.) -->
-        <div class="email-form">
-          <input type="email" placeholder="Your email address" aria-label="Email address">
-          <button type="button">Subscribe</button>
-        </div>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/mearcpress"
+          method="post"
+          class="email-form"
+        >
+          <label for="bd-email" class="sr-only">Email address</label>
+          <input type="email" name="email" id="bd-email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
     </section>
   </main>
