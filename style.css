@@ -1,0 +1,419 @@
+/* ============================================
+   HEWN STONE PRESS — Site Styles
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --stone-dark: #2c2a26;
+  --stone-mid: #4a463e;
+  --stone-warm: #6b6357;
+  --parchment: #f4f0ea;
+  --parchment-deep: #e8e2d8;
+  --cream: #faf8f5;
+  --accent: #8b7355;
+  --accent-light: #a8956f;
+  --text: #2c2a26;
+  --text-light: #6b6357;
+  --rule: #d4cec4;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Lato', 'Helvetica Neue', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text);
+  background-color: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Layout ---- */
+
+.site-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.narrow {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ---- Header / Nav ---- */
+
+.site-header {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .site-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--stone-dark);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-title span {
+  font-weight: 400;
+  color: var(--stone-warm);
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.site-nav a {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--stone-warm);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--stone-dark);
+}
+
+/* ---- Hero / Intro ---- */
+
+.hero {
+  padding: 5rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--stone-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.hero .tagline {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--stone-warm);
+  margin-bottom: 2rem;
+}
+
+.hero .intro {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ---- Section headings ---- */
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--stone-dark);
+  margin-bottom: 0.5rem;
+}
+
+.section-rule {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent);
+  border: none;
+  margin-bottom: 2.5rem;
+}
+
+/* ---- Book cards ---- */
+
+.catalog-section {
+  padding: 4rem 0;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 3rem;
+}
+
+.book-card {
+  text-align: center;
+}
+
+.book-cover {
+  width: 180px;
+  height: 270px;
+  margin: 0 auto 1.5rem;
+  background-color: var(--parchment-deep);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.08);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-cover .placeholder {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--stone-warm);
+  padding: 1rem;
+}
+
+.book-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--stone-dark);
+}
+
+.book-card .author {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.book-card .genre {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.book-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.book-links a {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.book-links a:hover {
+  border-color: var(--accent);
+}
+
+/* ---- About page ---- */
+
+.about-section {
+  padding: 4rem 0;
+}
+
+.about-section + .about-section {
+  border-top: 1px solid var(--rule);
+}
+
+.about-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--stone-dark);
+  margin-bottom: 1.25rem;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Contact ---- */
+
+.contact-block {
+  background: var(--parchment);
+  padding: 2.5rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.contact-block p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-block a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.2s;
+}
+
+.contact-block a:hover {
+  border-color: var(--accent);
+}
+
+/* ---- Coming soon ---- */
+
+.coming-soon-section {
+  padding: 4rem 0;
+}
+
+.coming-soon-section p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.coming-soon-section a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.2s;
+}
+
+.coming-soon-section a:hover {
+  border-color: var(--accent);
+}
+
+/* ---- Mailing list ---- */
+
+.mailing-section {
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.mailing-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.mailing-section p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.email-form input[type="email"] {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--rule);
+  background: white;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.email-form input[type="email"]:focus {
+  border-color: var(--accent);
+}
+
+.email-form button {
+  padding: 0.65rem 1.5rem;
+  background: var(--stone-dark);
+  color: var(--cream);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.email-form button:hover {
+  background: var(--stone-mid);
+}
+
+/* ---- Footer ---- */
+
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.site-footer p {
+  margin-bottom: 0.25rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .site-header .site-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .book-list { grid-template-columns: 1fr; }
+  .email-form { flex-direction: column; }
+}
